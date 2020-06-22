@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <parameter name="brower" value="chrome"/>
+  <parameter name="browser" value="chrome"/>
+  <listeners>
+    <listener class-name="UtilityFiles.Listeners"/>
+  </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
       <class name="TestCases.TestCase01">
@@ -11,6 +14,13 @@
           <include name="closeBrowser"/>
         </methods>
       </class> <!-- TestCases.TestCase01 -->
+      <class name="TestCases.TestCase02">
+        <methods>
+          <include name="newCustomer"/>
+          <include name="lunchBrowser"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- TestCases.TestCase02 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

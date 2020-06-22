@@ -20,6 +20,8 @@ public class DownloadFile {
 		pref.put("profile.default.content.settings.popups", 0);
 		pref.put("download.default_directory", folder.getAbsolutePath());
 		
+		
+		
 		 
 		 
 		 

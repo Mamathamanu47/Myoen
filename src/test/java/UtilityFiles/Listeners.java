@@ -9,21 +9,26 @@ import org.testng.ITestResult;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.Status;
 
 import TestCases.BaseClass;
 
 public class Listeners extends BaseClass implements ITestListener
+
+
 {
-	  public void onFinish(ITestContext arg0) {				
+	
+	public static ExtentTest extent;
+	  public void onFinish(ITestContext result) {				
       				
-        		
+        	extent= extent.log(Status.PASS, "Test passed");	
     }		
 
    
     public void onStart(ITestContext result)
     {					
-  	
+    
+    
         		
     }		
 			
